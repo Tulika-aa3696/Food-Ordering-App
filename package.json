@@ -1,0 +1,31 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "description": "A web-based food ordering app that allows users to browse menus, place orders, and track them in real-time. Built with Node.js, Express, and modern JavaScript frameworks, it offers a seamless experience across devices for both customers and restaurants.",
+  
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tulika-aa3696/Food-Ordering-App.git"
+  },
+  "keywords": [
+    "food",
+    "ordering"
+  ],
+  "author": "Tulika Chauhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tulika-aa3696/Food-Ordering-App/issues"
+  },
+  "homepage": "https://github.com/Tulika-aa3696/Food-Ordering-App#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

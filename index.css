@@ -1,0 +1,171 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+body {
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Logo img {
+    height: 100px; /* Adjust the height as needed */
+    border: 1px solid #d3d3d3;
+}
+
+.nav-Items ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-Items li {
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative; /* Needed for the ::after pseudo-element */
+    padding-bottom: 5px; /* Adds some space for the underline */
+}
+
+.nav-Items li:hover::after,
+.nav-Items li.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px; /* Thickness of the line */
+    background-color: purple;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-Items li:hover,
+.nav-Items li.active {
+    color: purple;
+}
+
+.app {
+    padding: 20px;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    width: 1000px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    background-color: #f5f5f5;
+    transition: box-shadow 0.3s;
+}
+
+.search input:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.search button {
+    padding: 10px 20px;
+    border: 1px solid #e0e0e0;
+    background-color: purple; /* Green background color */
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    border-left: none; /* Remove the border between the input and button */
+}
+
+.search button:hover {
+    background-color: #ba55d3; /* Darker green on hover */
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+.res-card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 300px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    font-family: 'Montserrat', sans-serif; /* Font family */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center align text and image */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.res-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.res-card img {
+    width: 100%; /* Make the image take the full width of the card */
+    height: 50%; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+    border-top-left-radius: 10px; /* Match the card's rounded corners */
+    border-top-right-radius: 10px; /* Match the card's rounded corners */
+}
+
+.res-card h1, .res-card h3 {
+    margin: 5px 0; /* Space around the text */
+}
+
+.res-card h1 {
+    font-size: 1.3em; /* Font size for the title */
+    color: #333333; /* Darker color for the title */
+}
+
+.res-card h3 {
+    font-size: 1em; /* Font size for the other text */
+    color: #666666; /* Grey color for the text */
+}
+
+.app {
+    padding: 20px;
+}
+ 
+/* styles.css */
+.Filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.Filter-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: purple; /* Example background color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Filter-btn:hover {
+    background-color: #ba55d3; /* Darker shade on hover */
+}

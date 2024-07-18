@@ -1,0 +1,94 @@
+Anything which can be implemented using React can be implemented using HTML,CSS,javascript.
+
+- Best Practice:
+    1. Saara code src folder mei rakho.
+    2. Make seperate files for all the components in components folders of src folders.
+    3. Component name should match the name of the file in which it is prersent.
+    4. Extension of the file can be .jsx/.txs/.js  ---> we can write anything kuch farak nhii padta, doesn't matter match. (use simple .js)
+    5. Hard-Coded data component file mei nhii rakha jaata. Keep in seperate files-->constant.js/config.js/utils.js
+
+- Importing components to the main(App.js) file:
+    component file se -> export    (export default <component-Name;)
+    main file mei -> import        (import <components-name> from "<path to the component file(with/without extension)>")  -> keep simple use without extension
+
+- Types of Exporting:
+    1. default Export:   jab ek hi cheese file se export karni ho--->  export default <component-Name;
+    iske liye normal import kiya jayega.
+
+    2. Named Export: jab ek file se multiple cheezei export karni ho.
+
+    iske liye aap component ya phr jis bhi cheese ko export karna ho uske defile hone se pehle hi jaha pr define karoge write export like 
+    
+    export const CDN_URL= "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+    export const LOGO_URL="https://images-platform.99static.com//DmBC8Q0X2EG9V3bunurGZp7MaC0=/0x0:1795x1795/fit-in/500x500/99designs-contests-attachments/118/118408/attachment_118408489";
+
+    Different method of import:
+
+    import { CDN_URL } from "../../utils/constant";
+
+    Ab ye js variable h toh inka use bhi jsx as js kia jayega mtlb {} ke saath inka use hoga throughout the code.
+
+
+Abhi tak hamari website static h kuch click karne pr kuch bhi nhii hota h 
+let's make it Dynamic.
+
+* Making a filter button that filters the stars based on RATING.
+    Button add kardia - Css lagadi 
+    Now we have to add event handling to the button
+
+    isko functional banane ke liye we need react hooks(Utility Function)
+
+#React Hooks : are the normal js variable which has the powers of React
+
+    1. useState()                   2. useEffect()
+
+    - isko import karne ka tareeka is: import { useState} from "react";
+    ye import kia gaya h from node_modules yhii pr iska kahi code likha hua hoga aur usko named export bhi kia gya hoga tabhi hum import kar paa rhe.
+
+    -Declaration + Modification:
+        const [ListOfRestaurant,setListOfRestaurant] = useState([]);
+                                                                |_____ yaha pr default value for the variable likhi jaati h abhi empty list h as default value.
+
+        ListOfRestaurant = ye toh stateVariable banane ke liye.
+        setListOfRestaurant = For modifying the state variable. iske andar jo bhi value doge woh value ListOfRestaurant ki set hojayigi automatically.
+
+
+        useState()---> ka use karne ka maksad ye h ki agar normal js varibale let se create karke filter uspar apply karte toh data toh change hota but UI layer usse sync nhii hoti aur data change hone pr ui change nhii hota. hence useState() humne use kia because it has capability to keep the dataLayer insync with the UI Layer.
+
+        Whenever the state variable updates React re-renders the component yaani body ke data ko hatake dubara se new data display hoga.
+
+        Hooks are just functions that you can use inside functional components to add extra features.
+
+Why React is faster/Used?
+React is good at DOM-Manipulation.
+    1.Reconcilation Algorithm: (React Fibre)
+
+        -Virtual DOM: React uses a virtual representation of the real DOM called the Virtual DOM. It's like a blueprint of what your actual web page should look like.
+
+        -Component Tree: React organizes components in a tree structure. Each component can have child components, creating a hierarchy.
+
+        -Updating Components: When something in your app changes (like user input or data updates), React needs to update the UI to reflect those changes.
+
+        -Diffing Process: React compares the previous version of the Virtual DOM with the new one. It looks for differences (or "diffs") between the two.
+
+        -Identifying Changes: React identifies which parts of the Virtual DOM have changed. It checks elements, attributes, or text content that are different.
+
+        -Minimizing Updates: React tries to update only what has changed. This saves time because it doesn't redo everything — just what's necessary.
+
+        -Reconciling Changes: React applies these identified changes to the real DOM. It updates the actual web page based on what was found in the Virtual DOM.
+
+        -Efficient Rendering: Finally, React re-renders (or updates) the components that need to be changed on the screen. This makes sure your app's UI looks updated and responsive.
+
+        By using this reconciliation algorithm, React makes updates to your web app faster and more efficient, giving users a smooth experience without unnecessary delays or flickering. It's one of the reasons why React is popular for building dynamic and interactive user interfaces on the web.
+
+
+
+
+
+
+
+
+
+
+
